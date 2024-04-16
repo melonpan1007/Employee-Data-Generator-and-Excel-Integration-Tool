@@ -22,9 +22,9 @@ std::string generateRandomName() {
     return firstName + " " + lastName;
 }
 
-// Function to generate branch names
+// Function to generate branch names in the format "Delhi_01", "Delhi_02", etc.
 std::string generateBranchName(int index) {
-    return (index % 2 == 0) ? "Delhi_" + std::to_string(index / 2 + 1) : "Mumbai_" + std::to_string(index / 2 + 1);
+    return "Delhi_" + std::to_string(index);
 }
 
 // Function to generate random employee data
@@ -82,4 +82,4 @@ int main() {
     saveToCSV(employeeData, "employee_data.csv");
     std::cout << "Data generated and saved to employee_data.csv" << std::endl;
     return 0;
-}
+} 
